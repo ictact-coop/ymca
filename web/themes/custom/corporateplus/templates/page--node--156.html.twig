@@ -1,7 +1,19 @@
 {# page-container #}
 <div class="page-container">
 
-  <h1>splash!!</h1>
+	{% if page.system_messages %}
+	  <div class="system-messages clearfix">
+	    <div class="container">
+	      <div class="row">
+	        <div class="col-md-12">
+	          {{ page.system_messages }}
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	{% endif %}
+
+	{{ page.content }}
 
 </div>
 {# EOF: page-container #}
